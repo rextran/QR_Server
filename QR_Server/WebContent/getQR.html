@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getImg(){
+    var url="D://QRCode/" + document.getElementById('txt').value;
+    console.log(url);
+    var div=document.createElement('div');
+    var img=document.createElement('img');
+    img.src=url;
+    div.appendChild(img);
+    document.getElementById('images').appendChild(div);
+    return false;
+}
+</script>
+</head>
+<body>
+<form>
+  <input type="text" id="txt">
+  <input id="btn" type="button" value="Get Image" onclick="getImg();" />
+</form>
+<div id="images" ></div>
+</body>
+</html>
